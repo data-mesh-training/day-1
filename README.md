@@ -1,3 +1,15 @@
-# day-1
+# Data Product Development Bootcamp - Day-1
 
-To prepare your exercise setup for this training, please go do https://colab.research.google.com/. When prompted to *Open notebook*, select *GitHub* on the left side, enter *data-mesh-training* into the top search bar, select *data-mesh-training/day-1* from the *Repository* drop down, and click on the exercise1.ipynb.
+This project contains the Jupyter Notebooks and supporting files for _Data Product Development Bootcamp_ with Max Schultze and Arif Wider. 
+
+These notebooks can be run on [Google Colab](https://colab.research.google.com/).
+
+To prepare your exercise setup for this training, please go do https://colab.research.google.com/.
+
+When prompted to *Open notebook* (alternatively when clicking on *File* -> *Upload Notebook*)
+* select *GitHub* on the left side
+* enter *data-mesh-training* into the top search bar
+* select *data-mesh-training/day-1* from the *Repository* drop down
+* click on the exercise1.ipynb
+
+As part of the notebook you will then clone the remaining repository which contains scripts you will be working with (/scripts), as well as solution files for post training reflection (/solutions).
