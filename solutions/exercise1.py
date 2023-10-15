@@ -1,3 +1,8 @@
+
+#-------------------------------------------------------------------------------
+#-------------------------------- Loadt dataset --------------------------------
+#-------------------------------------------------------------------------------
+
 import csv
 from datetime import date
 
@@ -7,16 +12,23 @@ with open('generated_data1.csv', newline='\n') as csvfile:
   for row in csvreader:
     dataset += [row]
 
-sales_count_june = 0
+#-------------------------------------------------------------------------------
+#------------------------- Number of sold items in June ------------------------
+#-------------------------------------------------------------------------------
+
+sold_items_june = 0
 for order_position in dataset:
   order_date = order_position[2]
   if '2023-06-01' <= order_date <= '2023-06-30':
-    sales_count_june += 1
+    sold_items_june += 1
 
-print("---------sales counts june---------")
-print(sales_count_june)
+print("---------sold items june---------")
+print(sold_items_june)
 
-#revenue in germany in july 2023
+#-------------------------------------------------------------------------------
+#-------------------------- Revenue in Germany in July -------------------------
+#-------------------------------------------------------------------------------
+
 from decimal import Decimal
 
 revenue_germany_july = Decimal(0.0)
@@ -26,6 +38,8 @@ for order_position in dataset:
   discounted_price = Decimal(order_position[5])
   if '2023-07-01' <= order_date <= '2023-07-31' and country == 'DE':
     revenue_germany_july += discounted_price
+  # "DateFix"
+  # if order_date is "null" check if you find a line item with the same order_position and an existing order_date
   if order_date == "null":
     for order_lookup in dataset:
       if order_lookup[0] == order_position[0] and '2023-07-01' <= order_lookup[2] <= '2023-07-31':
@@ -35,7 +49,10 @@ for order_position in dataset:
 print("---------revenue germany july---------")
 print(revenue_germany_july)
 
-# average order value
+#-------------------------------------------------------------------------------
+#------------------------ Average order value in August ------------------------
+#-------------------------------------------------------------------------------
+
 from decimal import Decimal
 
 order_id_tracker = set()
@@ -50,6 +67,8 @@ for order_position in dataset:
     if order_id not in order_id_tracker:
       order_id_tracker.add(order_id)
       order_counter_august += 1
+  # "DateFix"
+  # if order_date is "null" check if you find a line item with the same order_position and an existing order_date
   if order_date == "null":
     for order_lookup in dataset:
       if order_lookup[0] == order_position[0] and '2023-08-01' <= order_lookup[2] <= '2023-08-31':
