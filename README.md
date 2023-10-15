@@ -10,7 +10,7 @@ When prompted to *Open notebook* (alternatively when clicking on *File* -> *Uplo
 * select *GitHub* on the left side
 * enter *data-mesh-training* into the top search bar
 * select *data-mesh-training/day-1* from the *Repository* drop down
-* click on the exercise1.ipynb
+* click on the exercise_notebook1.ipynb
 
 It is possible that when executing a cell for the first time, Colab warns you that "This notebook was not authored by Google". Please click on *Run anyway* if you want to proceed.
 
