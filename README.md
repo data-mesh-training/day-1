@@ -12,4 +12,6 @@ When prompted to *Open notebook* (alternatively when clicking on *File* -> *Uplo
 * select *data-mesh-training/day-1* from the *Repository* drop down
 * click on the exercise1.ipynb
 
+It is possible that when executing a cell for the first time, Colab warns you that "This notebook was not authored by Google". Please click on *Run anyway* if you want to proceed.
+
 As part of the notebook you will then clone the remaining repository which contains scripts you will be working with (/scripts), as well as solution files for post training reflection (/solutions).
